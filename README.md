@@ -1,23 +1,16 @@
-# Sodaro Clean SaaS Website
+# Sodaro p5.js Interactive Thesis Demo
 
-A compact, responsive one-page website for the Sodaro graduate thesis and future business concept.
-
-## Open locally
-Double-click `index.html`.
-
-## Publish with GitHub Pages
-1. Create a GitHub repository.
-2. Upload everything in this folder.
-3. Open Settings > Pages.
-4. Choose Deploy from a branch, then select `main` and `/root`.
+Open `index.html` in a browser. Internet access is needed only to load the p5.js library and Google fonts from their CDNs.
 
 ## Included
+- Interactive Slow, Normal, and Busy dashboard
+- Cafe, retail, food truck, and studio modes
+- Crime, construction, community-event, and city-code alerts
+- Photo upload or mobile camera inspection demo
+- Simulated scan, readiness score, findings, and recommendations
 - Responsive desktop and mobile layout
-- Sodaro logo in the far top-left
-- p5.js interactive data background
-- Interactive business status experience
-- Working photo upload and simulated inspection scan
-- City-code alert result
-- Thesis and UX/UI explanation
+- p5.js animated data network
+- Official Sodaro brain logo in the far top-left
 
-The inspection result is a design demonstration and not an official city inspection.
+## GitHub Pages
+Upload the full folder to a GitHub repository, then enable Pages from the main branch and root folder.
