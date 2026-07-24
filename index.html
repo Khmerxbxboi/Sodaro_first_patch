@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#06172a" />
+  <meta name="description" content="Sodaro — an AI-powered interaction design thesis supporting Oakland small businesses." />
+  <title>Sodaro | Interaction Design Thesis</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="p5-bg" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Sodaro home">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 72 72" role="img"><path d="M36 7c-6-5-18-3-20 7-9 1-12 12-6 18-6 8-1 19 8 20 2 10 14 13 20 6 6 7 18 4 20-6 9-1 14-12 8-20 6-6 3-17-6-18C54 4 42 2 36 7Z"/><path d="M36 9v50M22 18h8v11h6M18 32h9v8h9M19 48h10v-7h7M50 18h-8v11h-6M54 32h-9v8h-9M53 48H43v-7h-7"/></svg>
+      </span>
+      <span>
+        <strong>SODARO</strong>
+        <small>DATA. COMMUNITY. GROWTH.</small>
+      </span>
+    </a>
+    <button class="menu-button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+      <a href="#story">Story</a>
+      <a href="#features">Features</a>
+      <a href="#process">Process</a>
+      <button class="nav-cta" data-open-modal="project-modal">View Project</button>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-visual" aria-label="Interactive Oakland community illustration">
+        <div class="city-art" aria-hidden="true">
+          <div class="sun"></div>
+          <div class="skyline skyline-back"></div>
+          <div class="skyline skyline-front"></div>
+          <div class="train-line"><div class="train"></div></div>
+          <div class="oakland-sign">WELCOME TO<br><strong>OAKLAND</strong></div>
+          <div class="map-pulse pulse-one"></div>
+          <div class="map-pulse pulse-two"></div>
+          <div class="map-pulse pulse-three"></div>
+        </div>
+        <div class="visual-label">Move your cursor or touch the image</div>
+      </div>
+
+      <div class="hero-copy">
+        <p class="eyebrow">Graduate Thesis · Interaction Design · UX/UI</p>
+        <h1 id="hero-title">Building a stronger Oakland through better information.</h1>
+        <p class="lead">Sodaro is my solo graduate thesis and future startup concept. It explores how AI, local data, and human-centered design can help small businesses understand city rules, find opportunities, and stay connected to their community.</p>
+        <div class="hero-actions">
+          <button class="primary-button" data-open-modal="project-modal">Explore Sodaro</button>
+          <a class="text-link" href="#features">See the features <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="mini-facts" aria-label="Project summary">
+          <div><strong>Role</strong><span>Founder and Interaction Designer</span></div>
+          <div><strong>Focus</strong><span>UX research, UI, AI product design</span></div>
+          <div><strong>Vision</strong><span>From thesis to future startup</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="story" class="story-section section-wrap">
+      <div class="section-heading">
+        <p class="eyebrow">The idea</p>
+        <h2>One platform for city codes, opportunities, and community support.</h2>
+      </div>
+      <div class="story-grid">
+        <article>
+          <span class="number">01</span>
+          <h3>Make city information clear</h3>
+          <p>Turn complex permits, regulations, and inspection requirements into simple steps that business owners can understand.</p>
+        </article>
+        <article>
+          <span class="number">02</span>
+          <h3>Design around real people</h3>
+          <p>Use interviews, usability feedback, information architecture, and mobile-first interaction design to reduce confusion and friction.</p>
+        </article>
+        <article>
+          <span class="number">03</span>
+          <h3>Build toward a real startup</h3>
+          <p>Develop the thesis into a practical service that helps local businesses grow while strengthening Oakland communities.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="features" class="features-section section-wrap" aria-labelledby="features-title">
+      <div class="section-heading split-heading">
+        <div>
+          <p class="eyebrow">Core features</p>
+          <h2 id="features-title">Designed to help before problems become fines.</h2>
+        </div>
+        <p>Tap a feature to open a short product explanation.</p>
+      </div>
+
+      <div class="feature-orbit">
+        <button class="feature-card" data-feature="assistant">
+          <span class="feature-icon brain-icon" aria-hidden="true">AI</span>
+          <span><strong>Business Assistant</strong><small>Ask about permits, licenses, and city services.</small></span>
+        </button>
+        <button class="feature-card featured" data-feature="inspection">
+          <span class="feature-icon camera-icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48"><path d="M8 15h8l3-5h10l3 5h8v25H8Z"/><circle cx="24" cy="27" r="8"/></svg>
+          </span>
+          <span><strong>Photo Inspection Check</strong><small>Take a photo and check possible code issues before an inspection.</small></span>
+        </button>
+        <button class="feature-card" data-feature="alerts">
+          <span class="feature-icon bell-icon" aria-hidden="true">!</span>
+          <span><strong>City Code Alerts</strong><small>Get updates when local inspection rules change.</small></span>
+        </button>
+        <button class="feature-card" data-feature="opportunities">
+          <span class="feature-icon chart-icon" aria-hidden="true">↗</span>
+          <span><strong>Local Opportunities</strong><small>Find grants, events, programs, and business support.</small></span>
+        </button>
+      </div>
+    </section>
+
+    <section id="process" class="process-section section-wrap">
+      <div class="process-panel">
+        <div>
+          <p class="eyebrow">UX and interaction design</p>
+          <h2>Research, simplify, prototype, and test.</h2>
+          <p>Sodaro brings together user research, service design, information architecture, responsive UI, data visualization, and interactive prototyping. The goal is not to add more technology. The goal is to make difficult systems easier to use.</p>
+        </div>
+        <ol class="process-steps">
+          <li><span>01</span>Listen to business owners</li>
+          <li><span>02</span>Map needs and task flows</li>
+          <li><span>03</span>Design mobile-first screens</li>
+          <li><span>04</span>Test, learn, and improve</li>
+        </ol>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>Sodaro · Solo Graduate Thesis</span>
+    <span>Bullimalinna Sot · Interaction Design</span>
+  </footer>
+
+  <dialog id="project-modal" class="modal">
+    <div class="modal-card">
+      <button class="modal-close" aria-label="Close project overview">×</button>
+      <p class="eyebrow">Project overview</p>
+      <h2>Sodaro connects business needs with city information.</h2>
+      <p>My thesis asks a simple question: how can interaction design make local government information more useful to the people who need it?</p>
+      <div class="modal-grid">
+        <div><strong>Problem</strong><span>Rules and resources are spread across many sites and written in difficult language.</span></div>
+        <div><strong>Solution</strong><span>A clear AI-assisted experience organized around business tasks, location, and current city codes.</span></div>
+        <div><strong>New feature</strong><span>Users can photograph a storefront or workspace to identify possible inspection concerns and review relevant code guidance.</span></div>
+        <div><strong>Next step</strong><span>Continue testing with business owners and develop verified city-data partnerships.</span></div>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog id="feature-modal" class="modal">
+    <div class="modal-card feature-modal-card">
+      <button class="modal-close" aria-label="Close feature details">×</button>
+      <div id="feature-modal-content"></div>
+    </div>
+  </dialog>
+
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.11.3/lib/p5.min.js"></script>
+  <script src="sketch.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
