@@ -1,40 +1,23 @@
-# Sodaro GitHub Pages Popup Site
+# Sodaro Clean SaaS Website
 
-A responsive, mobile-friendly Sodaro microsite built with HTML, CSS, JavaScript, and p5.js.
+A compact, responsive one-page website for the Sodaro graduate thesis and future business concept.
+
+## Open locally
+Double-click `index.html`.
 
 ## Publish with GitHub Pages
+1. Create a GitHub repository.
+2. Upload everything in this folder.
+3. Open Settings > Pages.
+4. Choose Deploy from a branch, then select `main` and `/root`.
 
-1. Create a new GitHub repository, for example `sodaro`.
-2. Upload all files from this folder to the repository root.
-3. In GitHub, open **Settings > Pages**.
-4. Under **Build and deployment**, select **Deploy from a branch**.
-5. Choose the `main` branch and `/root`, then save.
-6. Your link will look like:
+## Included
+- Responsive desktop and mobile layout
+- Sodaro logo in the far top-left
+- p5.js interactive data background
+- Interactive business status experience
+- Working photo upload and simulated inspection scan
+- City-code alert result
+- Thesis and UX/UI explanation
 
-   `https://YOUR-USERNAME.github.io/sodaro/`
-
-## Connect it to your portfolio button
-
-Use the published GitHub Pages URL as the button link in GoDaddy.
-
-Open in a new tab:
-
-```html
-<a href="https://YOUR-USERNAME.github.io/sodaro/" target="_blank" rel="noopener">Explore Sodaro</a>
-```
-
-Open as a popup window:
-
-```html
-<a href="https://YOUR-USERNAME.github.io/sodaro/"
-   onclick="window.open(this.href,'sodaro','width=1200,height=850,resizable=yes,scrollbars=yes'); return false;">
-  Explore Sodaro
-</a>
-```
-
-## Edit the content
-
-- Main page content: `index.html`
-- Colors and layout: `styles.css`
-- Popup feature descriptions: `script.js`
-- Interactive particle background: `sketch.js`
+The inspection result is a design demonstration and not an official city inspection.
