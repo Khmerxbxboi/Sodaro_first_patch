@@ -28,3 +28,21 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape'){setModal(accessModa
 $('#scanAgain').addEventListener('click',openInspection);input.addEventListener('change',()=>{const file=input.files[0];if(!file)return;img.src=URL.createObjectURL(file);upload.hidden=true;preview.hidden=false;empty.hidden=true;result.hidden=true;scan.hidden=false;let p=0;bar.style.width='0%';const timer=setInterval(()=>{p+=Math.floor(Math.random()*16)+8;if(p>=100){p=100;clearInterval(timer);setTimeout(showResult,350)}bar.style.width=p+'%';},320)});
 function showResult(){scan.hidden=true;result.hidden=false;const score=82+Math.floor(Math.random()*12);$('#scoreRing').textContent=score;$('#resultTitle').textContent=score>=88?'Likely ready':'Review recommended';$('#findingList').innerHTML='<li class="pass">Accessible entrance appears visible</li><li class="pass">Primary walkway appears open</li><li class="warn">Check outdoor sign permit and mounting height</li><li class="warn">Keep sidewalk display at least 36 inches clear</li>';}
 updateDashboard();window.addEventListener('resize',()=>drawChart(datasets[current].trend));
+
+const mapAreas={
+  north:{name:'North Oakland',detail:'Track transit changes, neighborhood events, and small-business activity near major corridors.'},
+  west:{name:'West Oakland',detail:'See construction, freight movement, safety updates, and opportunities affecting local foot traffic.'},
+  downtown:{name:'Downtown Oakland',detail:'Understand event activity, office traffic, permits, street closures, and nearby business conditions.'},
+  lake:{name:'Lake Merritt',detail:'Connect festivals, safety notices, parking conditions, and recreation traffic to business recommendations.'},
+  east:{name:'East Oakland',detail:'Surface community resources, transportation disruptions, local events, and neighborhood support.'},
+  fruitvale:{name:'Fruitvale',detail:'Highlight cultural events, transit activity, business openings, and community collaboration opportunities.'},
+  laurel:{name:'Laurel District',detail:'Follow MacArthur Boulevard activity, local commerce, events, safety concerns, and neighborhood change.'},
+  port:{name:'Oakland Port',detail:'Monitor freight traffic, road impacts, air-quality concerns, and movement affecting nearby businesses.'}
+};
+$$('.district').forEach(area=>area.addEventListener('click',()=>{
+  $$('.district').forEach(x=>x.classList.remove('active'));
+  area.classList.add('active');
+  const data=mapAreas[area.dataset.mapArea];
+  $('#mapInsight small').textContent=data.name.toUpperCase();
+  $('#mapInsight strong').textContent=data.detail;
+}));

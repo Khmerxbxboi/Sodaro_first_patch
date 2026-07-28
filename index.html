@@ -19,7 +19,7 @@
     </a>
     <button class="menu" aria-expanded="false">Menu</button>
     <nav>
-      <a href="#demo">Live Demo</a><a href="#inspection">Inspection</a><a href="#alerts">Alerts</a><a href="#thesis">Thesis</a>
+      <a href="#demo">Live Demo</a><a href="#inspection">Inspection</a><a href="#alerts">Alerts</a><a href="#uxui">UX/UI</a><a href="#thesis">Thesis</a>
     </nav>
   </header>
 
@@ -102,6 +102,71 @@
         <button data-scene="code"><span class="icon blue">✓</span><b>City-code update</b><small>Outdoor display rules changed</small></button>
       </div>
       <div class="scene-detail" id="sceneDetail"><div><span>Selected insight</span><h3>Choose an alert above.</h3></div><p>Sodaro connects local conditions to plain-language recommendations.</p></div>
+    </section>
+
+
+    <section id="uxui" class="section shell uxui-section">
+      <div class="section-head uxui-head">
+        <div><p class="eyebrow">UX &amp; UI case study</p><h2>Designed around real Oakland decisions.</h2></div>
+        <p>Sodaro turns neighborhood conditions into a clear path from awareness to action. The experience is built for busy owners, community members, immigrant families, elderly residents, and people who are not technical.</p>
+      </div>
+
+      <div class="uxui-showcase">
+        <figure class="uxui-visual">
+          <img src="assets/sodaro-ux-ui.png" alt="Sodaro desktop and mobile interface shown in a workspace">
+          <figcaption><span>Responsive product system</span><b>Desktop dashboard + mobile inspection flow</b></figcaption>
+        </figure>
+
+        <div class="uxui-summary">
+          <article><span>01</span><h3>Research</h3><p>Field observation, local business pain points, neighborhood change, and civic-information gaps.</p></article>
+          <article><span>02</span><h3>Structure</h3><p>Dashboard hierarchy, clear navigation, plain-language alerts, and reusable information cards.</p></article>
+          <article><span>03</span><h3>Interaction</h3><p>See the condition, understand the cause, receive a suggestion, and take the next step.</p></article>
+          <article><span>04</span><h3>Validation</h3><p>Usability testing, cognitive walkthroughs, observation, and iterative Figma revisions.</p></article>
+        </div>
+      </div>
+
+      <div class="oakland-experience">
+        <div class="map-copy">
+          <p class="eyebrow">Neighborhood Pulse Map</p>
+          <h3>One city. Different conditions.</h3>
+          <p>The map concept combines construction, crime alerts, local events, transportation activity, school zones, business openings, and neighborhood pressure indicators in one visual layer.</p>
+          <div class="map-legend"><span><i class="map-dot construction-dot"></i>Construction</span><span><i class="map-dot event-dot"></i>Events</span><span><i class="map-dot safety-dot"></i>Safety</span><span><i class="map-dot opportunity-dot"></i>Opportunity</span></div>
+          <div class="map-insight" id="mapInsight"><small>SELECT A NEIGHBORHOOD</small><strong>Explore how local conditions affect nearby businesses.</strong></div>
+        </div>
+
+        <div class="oakland-map" role="img" aria-label="Stylized interactive map of Oakland neighborhoods">
+          <svg viewBox="0 0 640 520" aria-hidden="true">
+            <defs>
+              <linearGradient id="mapGlow" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0a2b43"/><stop offset="1" stop-color="#07131f"/></linearGradient>
+              <filter id="softGlow"><feGaussianBlur stdDeviation="5" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+            </defs>
+            <path class="map-water" d="M44 438C140 360 178 292 228 193C282 85 410 32 590 52L614 476L44 476Z"/>
+            <path class="district" data-map-area="north" d="M218 72L352 47L438 85L421 167L320 181L236 142Z"/>
+            <path class="district" data-map-area="west" d="M154 154L236 142L320 181L298 275L190 298L126 226Z"/>
+            <path class="district" data-map-area="downtown" d="M320 181L421 167L462 235L400 302L298 275Z"/>
+            <path class="district" data-map-area="lake" d="M462 235L531 194L570 258L534 333L449 339L400 302Z"/>
+            <path class="district" data-map-area="east" d="M449 339L534 333L596 398L553 470L433 444L380 377Z"/>
+            <path class="district" data-map-area="fruitvale" d="M298 275L400 302L449 339L380 377L270 383L222 330Z"/>
+            <path class="district" data-map-area="laurel" d="M270 383L380 377L433 444L355 485L245 459Z"/>
+            <path class="district" data-map-area="port" d="M126 226L190 298L222 330L174 407L76 390L62 282Z"/>
+            <path class="road" d="M102 351C190 325 247 286 307 238C378 181 450 143 551 117"/>
+            <path class="road secondary-road" d="M175 198C260 229 343 281 432 396"/>
+            <circle class="pulse safety-pulse" cx="405" cy="274" r="10"/><circle class="pulse event-pulse" cx="487" cy="297" r="10"/><circle class="pulse construction-pulse" cx="252" cy="230" r="10"/><circle class="pulse opportunity-pulse" cx="334" cy="414" r="10"/>
+            <text x="302" y="112">NORTH OAKLAND</text><text x="164" y="229">WEST OAKLAND</text><text x="337" y="236">DOWNTOWN</text><text x="462" y="277">LAKE MERRITT</text><text x="476" y="402">EAST OAKLAND</text><text x="286" y="336">FRUITVALE</text><text x="293" y="435">LAUREL</text><text x="87" y="347">PORT</text>
+          </svg>
+          <div class="map-note">Tap a district</div>
+        </div>
+      </div>
+
+      <div class="design-system">
+        <div><p class="eyebrow">Design system</p><h3>Clear, consistent, and built to scale.</h3></div>
+        <div class="system-grid">
+          <article><span class="swatches"><i></i><i></i><i></i><i></i></span><b>Color language</b><small>Data, community, growth, risk, and opportunity.</small></article>
+          <article><span class="type-sample">Aa</span><b>Accessible typography</b><small>Strong hierarchy with plain-language labels.</small></article>
+          <article><span class="component-sample"><i></i><i></i><i></i></span><b>Reusable components</b><small>Cards, alerts, controls, and responsive states.</small></article>
+          <article><span class="flow-sample">See → Understand → Act</span><b>Core UX flow</b><small>Designed to reduce confusion and decision time.</small></article>
+        </div>
+      </div>
     </section>
 
     <section id="thesis" class="section shell thesis">
