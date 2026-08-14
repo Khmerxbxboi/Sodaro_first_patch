@@ -15,20 +15,21 @@
   <header class="topbar">
     <a class="brand" href="#top" aria-label="Sodaro home">
       <img src="assets/sodaro-logo.png" alt="Sodaro brain circuit logo">
-      <div><strong>SODARO</strong><span>DATA. COMMUNITY. GROWTH.</span></div>
+      <div><strong>SODARO</strong><span>A VITYARO SaaS PRODUCT</span></div>
     </a>
     <button class="menu" aria-expanded="false">Menu</button>
     <nav>
-      <a href="#demo">Live Demo</a><a href="#inspection">Inspection</a><a href="#alerts">Alerts</a><a href="#uxui">UX/UI</a><a href="#thesis">Thesis</a>
+      <a href="#demo">Live Demo</a><a href="#inspection">Inspection</a><a href="#alerts">Alerts</a><a href="#uxui">UX/UI</a><a href="#thesis">Thesis</a><a href="#about">About</a>
     </nav>
   </header>
 
   <main id="top">
     <section class="hero shell">
       <div class="hero-copy">
-        <p class="eyebrow">Solo Graduate Thesis · Interaction Design · UX/UI</p>
+        <p class="eyebrow">A Vityaro Product · Solo Graduate Thesis · Interaction Design · UX/UI</p>
+        <div class="company-relationship"><span><b>Vityaro</b> Private Parent Company</span><i>→</i><span><b>Sodaro</b> SaaS Platform / Product</span></div>
         <h1>See what is happening.<br><span>Understand why.</span><br>Know what to do next.</h1>
-        <p>Sodaro is an AI-powered concept for Oakland small businesses. It turns city conditions, community activity, construction, crime alerts, permits, and local opportunities into simple actions.</p>
+        <p>Sodaro is an AI-powered concept for Oakland businesses and nonprofit organizations. It turns city conditions, community activity, construction, crime alerts, permits, grants, and local opportunities into simple actions.</p>
         <div class="hero-actions"><a class="primary" href="#demo">Try the demo</a><a class="secondary" href="#inspection">Test photo inspection</a></div>
         <div class="legend"><span><i class="blue"></i>Data</span><span><i class="pink"></i>Community</span><span><i class="lime"></i>Growth</span><span><i class="gold"></i>Opportunity</span></div>
       </div>
@@ -43,10 +44,14 @@
     </section>
 
     <section id="demo" class="section shell">
-      <div class="section-head"><div><p class="eyebrow">Interactive SaaS teaser</p><h2>Business status demo</h2></div><p>Choose a business type, then switch the current condition.</p></div>
+      <div class="section-head"><div><p class="eyebrow">Interactive SaaS teaser</p><h2>Organization status demo</h2></div><p>Switch between a business or nonprofit, choose the organization type, then test the current condition.</p></div>
       <div class="demo-grid">
         <aside class="control-panel">
-          <label>Business type</label>
+          <label>Organization</label>
+          <div class="segmented org-kind" id="organizationKinds">
+            <button class="active" data-kind="business">Business</button><button data-kind="nonprofit">Nonprofit</button>
+          </div>
+          <label>Organization type</label>
           <div class="segmented" id="businessTypes">
             <button class="active" data-business="Cafe">Cafe</button><button data-business="Retail">Retail</button><button data-business="Food Truck">Food truck</button><button data-business="Studio">Creative studio</button>
           </div>
@@ -64,7 +69,7 @@
             <article><span>What should you do?</span><h3 id="actionText">Keep your regular hours and promote today's best seller.</h3></article>
             <article><span>Possible impact</span><h3 id="impactText">Maintain stable sales and prepare for the evening rush.</h3></article>
           </div>
-          <div class="metric-row"><div><span>Visitors</span><strong id="visitors">84</strong></div><div><span>Sales</span><strong id="sales">$612</strong></div><div><span>New customers</span><strong id="customers">9</strong></div><div><span>Foot traffic</span><strong id="traffic">Normal</strong></div></div>
+          <div class="metric-row"><div><span id="visitorsLabel">Visitors</span><strong id="visitors">84</strong></div><div><span id="salesLabel">Sales</span><strong id="sales">$612</strong></div><div><span id="customersLabel">New customers</span><strong id="customers">9</strong></div><div><span id="trafficLabel">Foot traffic</span><strong id="traffic">Normal</strong></div></div>
         </div>
       </div>
     </section>
@@ -94,7 +99,7 @@
     </section>
 
     <section id="alerts" class="section shell">
-      <div class="section-head"><div><p class="eyebrow">City awareness</p><h2>Crime, construction, and community alerts</h2></div><p>Click a card to see how one local condition changes the business recommendation.</p></div>
+      <div class="section-head"><div><p class="eyebrow">City awareness</p><h2>Crime, construction, and community alerts</h2></div><p>Click a card to see how one local condition changes the recommendation for a business or nonprofit organization.</p></div>
       <div class="alert-cards">
         <button data-scene="crime"><span class="icon pink">!</span><b>Crime and safety</b><small>Street closure near Lake Merritt</small></button>
         <button data-scene="construction"><span class="icon gold">⌂</span><b>Construction impact</b><small>Reduced foot traffic on Telegraph</small></button>
@@ -108,7 +113,7 @@
     <section id="uxui" class="section shell uxui-section">
       <div class="section-head uxui-head">
         <div><p class="eyebrow">UX &amp; UI case study</p><h2>Designed around real Oakland decisions.</h2></div>
-        <p>Sodaro turns neighborhood conditions into a clear path from awareness to action. The experience is built for busy owners, community members, immigrant families, elderly residents, and people who are not technical.</p>
+        <p>Sodaro turns neighborhood conditions into a clear path from awareness to action. The experience is built for small-business owners, nonprofit leaders, temple and community organizers, immigrant families, elderly residents, and people who are not technical.</p>
       </div>
 
       <div class="uxui-showcase">
@@ -125,36 +130,63 @@
         </div>
       </div>
 
-      <div class="oakland-experience">
+      <div class="oakland-experience pulse-experience" id="pulseMapSection">
         <div class="map-copy">
           <p class="eyebrow">Neighborhood Pulse Map</p>
           <h3>One city. Different conditions.</h3>
-          <p>The map concept combines construction, crime alerts, local events, transportation activity, school zones, business openings, and neighborhood pressure indicators in one visual layer.</p>
-          <div class="map-legend"><span><i class="map-dot construction-dot"></i>Construction</span><span><i class="map-dot event-dot"></i>Events</span><span><i class="map-dot safety-dot"></i>Safety</span><span><i class="map-dot opportunity-dot"></i>Opportunity</span></div>
-          <div class="map-insight" id="mapInsight"><small>SELECT A NEIGHBORHOOD</small><strong>Explore how local conditions affect nearby businesses.</strong></div>
+          <p>Move across Oakland to see what is happening around each neighborhood. Filter the map by condition, hover over hotspots, or choose a district to surface a live-style community snapshot.</p>
+
+          <div class="pulse-controls" id="pulseControls" aria-label="Map condition filters">
+            <button class="pulse-filter active" data-filter="all"><span class="filter-dot all-dot"></span>All</button>
+            <button class="pulse-filter" data-filter="strong"><span class="filter-dot strong-dot"></span>Strong</button>
+            <button class="pulse-filter" data-filter="stable"><span class="filter-dot stable-dot"></span>Stable</button>
+            <button class="pulse-filter" data-filter="caution"><span class="filter-dot caution-dot"></span>Caution</button>
+            <button class="pulse-filter" data-filter="risk"><span class="filter-dot risk-dot"></span>At risk</button>
+            <button class="pulse-filter" data-filter="critical"><span class="filter-dot critical-dot"></span>Critical</button>
+          </div>
+
+          <div class="map-insight map-insight-live" id="mapInsight">
+            <div class="insight-kicker"><span class="live-pip"></span><small>LIVE NEIGHBORHOOD VIEW</small></div>
+            <strong id="pulseTitle">Explore Oakland</strong>
+            <p id="pulseDetail">Hover over a marker or select a neighborhood to see what is changing and why it matters.</p>
+            <div class="insight-metrics">
+              <div><span id="pulseScore">72</span><small>Pulse score</small></div>
+              <div><span id="pulseSignals">18</span><small>Active signals</small></div>
+              <div><span id="pulseBusinesses">342</span><small>Organizations</small></div>
+            </div>
+          </div>
+
+          <div class="district-chips" id="districtChips" aria-label="Oakland planning area shortcuts">
+            <button data-area="west">West Oakland</button><button data-area="north">North Oakland / Adams Point</button><button data-area="northhills">North Oakland Hills</button><button data-area="downtown">Downtown</button><button data-area="glenview">Glenview / Redwood Heights</button><button data-area="fruitvale">Eastlake / Fruitvale</button><button data-area="central">Central / East Oakland</button><button data-area="easthills">East Oakland Hills</button><button data-area="coliseum">Coliseum / Airport</button>
+          </div>
         </div>
 
-        <div class="oakland-map" role="img" aria-label="Stylized interactive map of Oakland neighborhoods">
-          <svg viewBox="0 0 640 520" aria-hidden="true">
-            <defs>
-              <linearGradient id="mapGlow" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0a2b43"/><stop offset="1" stop-color="#07131f"/></linearGradient>
-              <filter id="softGlow"><feGaussianBlur stdDeviation="5" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-            </defs>
-            <path class="map-water" d="M44 438C140 360 178 292 228 193C282 85 410 32 590 52L614 476L44 476Z"/>
-            <path class="district" data-map-area="north" d="M218 72L352 47L438 85L421 167L320 181L236 142Z"/>
-            <path class="district" data-map-area="west" d="M154 154L236 142L320 181L298 275L190 298L126 226Z"/>
-            <path class="district" data-map-area="downtown" d="M320 181L421 167L462 235L400 302L298 275Z"/>
-            <path class="district" data-map-area="lake" d="M462 235L531 194L570 258L534 333L449 339L400 302Z"/>
-            <path class="district" data-map-area="east" d="M449 339L534 333L596 398L553 470L433 444L380 377Z"/>
-            <path class="district" data-map-area="fruitvale" d="M298 275L400 302L449 339L380 377L270 383L222 330Z"/>
-            <path class="district" data-map-area="laurel" d="M270 383L380 377L433 444L355 485L245 459Z"/>
-            <path class="district" data-map-area="port" d="M126 226L190 298L222 330L174 407L76 390L62 282Z"/>
-            <path class="road" d="M102 351C190 325 247 286 307 238C378 181 450 143 551 117"/>
-            <path class="road secondary-road" d="M175 198C260 229 343 281 432 396"/>
-            <circle class="pulse safety-pulse" cx="405" cy="274" r="10"/><circle class="pulse event-pulse" cx="487" cy="297" r="10"/><circle class="pulse construction-pulse" cx="252" cy="230" r="10"/><circle class="pulse opportunity-pulse" cx="334" cy="414" r="10"/>
-            <text x="302" y="112">NORTH OAKLAND</text><text x="164" y="229">WEST OAKLAND</text><text x="337" y="236">DOWNTOWN</text><text x="462" y="277">LAKE MERRITT</text><text x="476" y="402">EAST OAKLAND</text><text x="286" y="336">FRUITVALE</text><text x="293" y="435">LAUREL</text><text x="87" y="347">PORT</text>
-          </svg>
-          <div class="map-note">Tap a district</div>
+        <div class="pulse-map-shell">
+          <div class="map-toolbar">
+            <div><span class="toolbar-label">OAKLAND, CA</span><b id="mapModeLabel">All neighborhood signals</b></div>
+            <div class="map-actions"><button id="mapReset" type="button">Reset view</button><button id="mapDemo" type="button">▶ Pulse demo</button></div>
+          </div>
+
+          <div class="real-map-stage" id="realMapStage" aria-label="Interactive Oakland neighborhood pulse map">
+            <img src="assets/neighborhood-pulse-map.png" alt="Oakland neighborhood pulse map" class="pulse-map-image">
+            <div class="map-scanline" aria-hidden="true"></div>
+            <div class="map-focus-ring" id="mapFocusRing" aria-hidden="true"></div>
+
+            <button class="map-hotspot stable" data-area="west" data-condition="stable" style="--x:32%;--y:34%" aria-label="West Oakland stable signal"><span></span></button>
+            <button class="map-hotspot critical" data-area="north" data-condition="critical" style="--x:42%;--y:22%" aria-label="North Oakland Adams Point critical signal"><span></span></button>
+            <button class="map-hotspot strong" data-area="northhills" data-condition="strong" style="--x:55%;--y:18%" aria-label="North Oakland Hills strong signal"><span></span></button>
+            <button class="map-hotspot risk" data-area="downtown" data-condition="risk" style="--x:43%;--y:43%" aria-label="Downtown Oakland at-risk signal"><span></span></button>
+            <button class="map-hotspot stable" data-area="glenview" data-condition="stable" style="--x:55%;--y:36%" aria-label="Glenview Redwood Heights stable signal"><span></span></button>
+            <button class="map-hotspot caution" data-area="fruitvale" data-condition="caution" style="--x:51%;--y:55%" aria-label="Eastlake Fruitvale caution signal"><span></span></button>
+            <button class="map-hotspot stable" data-area="central" data-condition="stable" style="--x:62%;--y:61%" aria-label="Central East Oakland stable signal"><span></span></button>
+            <button class="map-hotspot strong" data-area="easthills" data-condition="strong" style="--x:70%;--y:46%" aria-label="East Oakland Hills strong signal"><span></span></button>
+            <button class="map-hotspot caution" data-area="coliseum" data-condition="caution" style="--x:52%;--y:72%" aria-label="Coliseum Airport caution signal"><span></span></button>
+
+            <div class="hotspot-tooltip" id="hotspotTooltip" hidden><small></small><b></b><p></p></div>
+            <div class="map-floating-legend"><span><i class="strong-dot"></i>Strong</span><span><i class="stable-dot"></i>Stable</span><span><i class="caution-dot"></i>Caution</span><span><i class="risk-dot"></i>At risk</span><span><i class="critical-dot"></i>Critical</span></div>
+          </div>
+
+          <div class="map-ticker" aria-live="polite"><span>LIVE SIGNALS</span><div id="mapTickerText">Lake Merritt event traffic rising · Downtown permit activity updated · Fruitvale transit flow changing</div></div>
         </div>
       </div>
 
@@ -170,12 +202,30 @@
     </section>
 
     <section id="thesis" class="section shell thesis">
-      <div><p class="eyebrow">Interaction design thesis</p><h2>From confusion to action.</h2><p>The core journey is simple: see the current status, understand the cause, receive a clear suggestion, and take action. Sodaro is designed for owners who do not have time to study complicated dashboards.</p></div>
+      <div><p class="eyebrow">Interaction design thesis</p><h2>From confusion to action.</h2><p>The core journey is simple: see the current status, understand the cause, receive a clear suggestion, and take action. Sodaro is designed for business owners and nonprofit leaders who do not have time to study complicated dashboards.</p></div>
       <ol><li><span>1</span>See Slow, Normal, or Busy</li><li><span>2</span>Understand the real-world cause</li><li><span>3</span>Receive a practical recommendation</li><li><span>4</span>Take action with confidence</li></ol>
     </section>
+    <section id="about" class="section shell about-section">
+      <div class="about-photo">
+        <img src="assets/bullimalinna-innovation-festival-2026.png" alt="Bullimalinna Sot presenting Sodaro at Innovation Festival 2026">
+        <div class="about-badge"><span>Innovation Festival</span><strong>2026</strong></div>
+      </div>
+      <div class="about-copy">
+        <p class="eyebrow">About Sodaro</p>
+        <h2>Research first. Built from Oakland.</h2>
+        <p>Sodaro was created for my solo graduate thesis, but I am also exploring how it could grow into a real SaaS platform after my graduate program. I plan to keep investing my time into the idea, test it with people, and see where it can go.</p>
+        <p>The project is based on real interviews, real research, public information, and the data I can access today. The goal is not only to support small businesses. Sodaro also focuses on nonprofit organizations that need a simple way to understand what is happening around them.</p>
+        <p>I believe useful city data should be easier to understand. Instead of making people search through spreadsheets and many government websites, Sodaro explores how AI, public data, and computer vision can bring the information together and turn it into simple, actionable insights.</p>
+        <blockquote>“Sodaro brings all of that together in one platform. We combine AI, public data, and computer vision to give entrepreneurs simple, actionable insights instead of overwhelming them with spreadsheets and government websites.”</blockquote>
+        <div class="about-tags"><span>Solo Thesis</span><span>Real Interviews</span><span>UX Research</span><span>Small Business</span><span>Nonprofit</span><span>AI + Public Data</span></div>
+      </div>
+    </section>
+
   </main>
 
-  <footer><div class="brand footer-brand"><img src="assets/sodaro-logo.png" alt=""><div><strong>SODARO</strong><span>DATA. COMMUNITY. GROWTH.</span></div></div><p>Bullimalinna Sot · Solo Graduate Thesis · Interaction Design</p></footer>
+  <footer><div class="brand footer-brand"><img src="assets/sodaro-logo.png" alt=""><div><strong>SODARO</strong><span>DATA. COMMUNITY. GROWTH.</span></div></div><p><a class="creator-link" href="https://www.jayaproduction.com" aria-label="Visit Bullimalinna Sot portfolio">Bullimalinna Sot</a> · Solo Graduate Thesis · Interaction Design</p><p class="vityaro-note"><strong>Vityaro</strong> is the private parent company. <strong>Sodaro</strong> is the SaaS platform built and operated under Vityaro.</p></footer>
+
+  <button class="back-to-top" id="backToTop" type="button" aria-label="Back to top"><span>↑</span><b>TOP</b></button>
 
   <div class="access-modal" id="inspectionAccess" hidden>
     <div class="access-backdrop" data-close-access></div>
